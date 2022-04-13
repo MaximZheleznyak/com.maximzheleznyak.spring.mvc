@@ -19,14 +19,16 @@
 <form:form action = "showDetails" modelAttribute="employee">
 
     Name <form:input path="name"/>
-    <br>
-    <br>
+    <form:errors path="name"/>
+
+
+    <br><br>
     Surname <form:input path="surname"/>
-    <br>
-    <br>
+    <form:errors path="surname"/>
+    <br><br>
     Salary <form:input path="salary"/>
-    <br>
-    <br>
+    <form:errors path="salary"/>
+    <br><br>
 
     Department <form:select path="department">
 
@@ -42,6 +44,31 @@
 
     <form:radiobuttons path="carBrend" items="${employee.carBrends}"/>
 
+    <br>
+    <br>
+
+
+    Phone Number:  <form:input path="phoneNumber"/>
+    <form:errors path="phoneNumber"/>
+    <br>
+    <br>
+
+
+    Email:  <form:input path="email"/>
+    <form:errors path="email"/>
+    <br>
+    <br>
+
+
+    Foreign language(s)
+    <form:checkboxes path="languages" items="${employee.languageList}"/>
+
+
+
+
+<%--    EN <form:checkbox path="languages" value="English"/>--%>
+<%--    DE <form:checkbox path="languages" value="Deutch"/>--%>
+<%--    FR <form:checkbox path="languages" value="French"/>--%>
 
 
 <%--    BMW <form:radiobutton path="carBrend" value="BMW"/>--%>
